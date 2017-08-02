@@ -13,58 +13,82 @@
       <script src="../../assets/js/html5shiv.js"></script>
       <script src="../../assets/js/respond.min.js"></script>
     <![endif]-->
+    <style>
+    .carousel-fade .item {
+          transition: 3s ease-in-out opacity;
+        }
+
+    	.item,
+        .active.left,
+        .active.right {
+            opacity: 1;
+            z-index: 1;
+        }
+		.active,
+        {
+            opacity: 1;
+            z-index: 1;
+        }
+        .next.left,
+        .prev.right {
+            opacity: 1;
+            z-index: 2;
+        }
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+            left: 0 !important;
+            top:  0 !important;
+        }
+        .next,.prev{
+			opacity: 1;
+            z-index: 2;
+        }
+        .carousel-control {
+        z-index: 3;
+    }
+    body{
+    	background-color: pink;
+    }
+    </style>
   </head>
   <body>
     <div class="container">
-	<div class="row">
-		<h1>Карусель с fade-эффектом</h1>
-		<p><a href="index.html">На главную</a></p>
-	</div>	 
-	<div class="row">
-		<div id="#myCarousel" class="carousel fade" data-ride="carousel">
-				  <!-- Indicators -->
-				  <ol class="carousel-indicators">
-					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-					<li data-target="#myCarousel" data-slide-to="1"></li>
-					<li data-target="#myCarousel" data-slide-to="2"></li>
-				  </ol>
-
-				  <!-- Wrapper for slides -->
-				  <div class="carousel-inner">
-					<div class="item active">
-					  <img src="img/slider/1.jpg" alt="...">
-					  <div class="carousel-caption">
-						<h3>Россия (Москва)</h3>
-						<p>Где это видано, чтобы люди в Москве без прописки проживали.</p>
-					  </div>
-					</div>
-					
-					<div class="item">
-					  <img src="img/slider/2.jpg" alt="...">
-					  <div class="carousel-caption">
-						<h3>Осень</h3>
-						<p>Осень — это вторая весна, когда каждый лист — цветок.</p>
-					  </div>
-					</div>
-					
-					<div class="item">
-					  <img src="img/slider/3.jpg" alt="...">
-					  <div class="carousel-caption">
-						<h3>Дождь</h3>
-						<p>Осень опять идут дожди...</p>
-					  </div>
-					</div>
-				  </div>
-
-				  <!-- Controls -->
-				  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-					<span class="glyphicon glyphicon-chevron-left"></span>
-				  </a>
-				  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-					<span class="glyphicon glyphicon-chevron-right"></span>
-				  </a>
-				</div>
+		<div class="row">
+			<h1>Карусель с fade-эффектом</h1>
+			<p><a href="index.html">На главную</a></p>
 		</div>
+
+	<div class="row">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-9">
+		<!-- ============================================== -->
+		<div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#carousel" data-slide-to="0"></li>
+				<li data-target="#carousel" data-slide-to="1"></li>
+				<li data-target="#carousel" data-slide-to="2"></li>
+			</ol>
+		
+			<div class="carousel-inner">
+				<div class="item active">
+					<img class="img-responsive" src="img/slider/1.jpg" alt="">
+				</div>
+				<div class="item">
+					<img class="img-responsive"  src="img/slider/2.jpg" alt="">
+				</div>
+				<div class="item">
+					<img class="img-responsive"  src="img/slider/3.jpg" alt="">
+				</div>
+			</div>
+
+			<a href="#carousel" class="carousel-control left" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+			<a href="#carousel" class="carousel-control right" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+		</div>
+		<!-- ============================================== -->
+		</div>
+	</div>
 	</div>
     <!-- Placed at the end of the document so the pages load faster -->
 	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>

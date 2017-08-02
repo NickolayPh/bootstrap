@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Группа панелей - Аккордион</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<style>
+		.panel-body{
+			border-left: 1px solid silver;
+			border-right: 1px solid silver;
+		}
+		.panel-title a{
+			display: block;
+		}
+	</style>
+</head>
+<body> 
+<div class="container">
+<div class="row">
+	<h1>Группа панелей - Аккордион</h1>
+	<a href="index.html">Главная</a>
+	<hr>
+</div>
+	<div class="row">
+<div class="col-xs-6 panel-group" id="panel-collapsed-group">
+<!-- ================================================== -->
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a href="#element1" data-toggle="collapse" data-parent="#panel-collapsed-group">
+					Панель 1
+				</a>
+			</h4>
+		</div>
+	</div>
+	<div id="element1" class="panel-collapse collapse in">
+		<div class="panel-body">
+			Текст панели 1
+		</div>
+	</div>
+<!-- ===================================================== -->
+<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a href="#element2" data-toggle="collapse" data-parent="#panel-collapsed-group">
+					Панель 2
+				</a>
+			</h4>
+		</div>
+	</div>
+	<div id="element2" class="panel-collapse collapse">
+		<div class="panel-body">
+			Текст панели 2
+		</div>
+	</div>
+<!-- ===================================================== -->
+<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a href="#element3" data-toggle="collapse" data-parent="#panel-collapsed-group">
+					Панель 3
+				</a>
+			</h4>
+		</div>
+	</div>
+	<div id="element3" class="panel-collapse collapse">
+		<div class="panel-body">
+			Текст панели 3
+		</div>
+	</div>
+<!-- ===================================================== -->
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#element4" data-toggle="collapse" data-parent="#panel-collapsed-group">Панель 4</a>
+		</h4>
+	</div>
+	<div class="panel-collapse collapse" id="element4">
+		<div class="panel-body">
+			Тект панели 4
+		</div>
+	</div>
+</div>
+<!-- ===================================================== -->
+</div>
+</div>
+</div>
+<!-- javascript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$(".panel-title a").on("click", function(){
+			$(".panel-collapse").removeClass("in");
+		})
+	});
+</script>
+</body>
+</html>

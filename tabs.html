@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Панель с вкладками</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body> 
+<div class="container">
+	<div class="row">
+		<h1>Панель с вкладками</h1> 
+		<a href="index.html">На главную</a>
+		<hr>
+	</div>
+	<div class="row">
+
+		<ul class="nav nav-tabs">
+			<li class="active">
+				<a href="#panel1" data-toggle="tab">item1</a>
+			</li>
+			<li><a data-toggle="tab" href="#panel2">item2</a></li>
+			<li><a data-toggle="tab" href="#panel3">item3</a></li>
+			<li><a data-toggle="tab" href="#panel4">item4</a></li>
+		</ul>
+
+		<div class="tab-content">
+			<div id="panel1" class="fade active in tab-pane">
+			<h3>HOME</h3>
+			<p>Текст панели 1</p>
+			</div>
+			<div id="panel2" class="fade tab-pane">
+			<h3>Panel2</h3>
+			<p>Текст панели 2</p>
+			</div>
+			<div id="panel3" class="fade tab-pane">
+			<h3>Panel3</h3>
+			<p>Текст панели 3</p>
+			</div>
+			<div id="panel4" class="fade tab-pane">
+			<h3>Panel4</h3>
+			<p>Текст панели 4</p>
+			</div>
+		</div>
+		
+	</div>
+</div>	
+<!-- javascript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Button groups</title>
+    <title>Dropdowns</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -13,15 +13,26 @@
 <body> 
 <div class="container">
 	<div class="row">
-		<h1>Button groups</h1> 
+		<h1>Dropdowns</h1> 
 		<a href="index.html">На главную</a>
 		<hr>
 	</div>
 	<div class="row">
-		
+		<div class="dropdown">
+			<button class="btn btn-info dropdown-toggle" data-toggle="dropdown">Dropdown <i class="caret"></i></button>
+			<ul class="dropdown-menu">
+				<li class="dropdown-header">Заголовок</li>
+				<li class="divider"></li>
+				<li><a href="#">Item1</a></li>
+				<li><a href="#">Item2</a></li>
+				<li><a href="#">Item3</a></li>
+				<li class="divider"></li>
+				<li><a href="#">Item4</a></li>
+				<li class="disabled"><a href="#">Disabled Item</a></li>
+			</ul>
+		</div>
 	</div>
-</div>
-
+</div>	
 <!-- javascript -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
