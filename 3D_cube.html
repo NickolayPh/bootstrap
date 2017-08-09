@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3 d cube</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+<style>
+.wrapper{
+	perspective: 1500px;
+}
+#cube{
+	margin: 80px;
+	width: 300px;
+	height: 300px;
+	position: relative;
+	transform-style: preserve-3d;
+	transform-origin:  50%  50%  -150px;
+	transform: rotate3d(1,1,1,-45deg);
+    
+}
+.box{
+	width:300px;
+	height:300px;
+	position: absolute;
+	color: white;
+	line-height: 300px;
+	font-size: 30px;
+	text-align: center;
+	transform-origin:  50%  50%  -150px;
+	background: radial-gradient(transparent,rgba(0,0,0,.7));
+	border: 5px solid silver;
+	 
+}
+
+#box1{
+	transform: rotateX(0deg);
+}	
+#box2{
+	transform: rotateX(90deg);
+}
+#box3{
+	transform: rotateX(-90deg);
+}
+#box4{
+	transform: rotateX(-180deg);
+}
+#box5{
+	transform: rotateY(90deg);
+}
+#box2{
+	transform: rotateY(-90deg);
+}
+</style>
+</head>
+<body> 
+<div class="container">
+	<div class="row">
+		<h1>Cube 3 D</h1> 
+		<a href="index.html">На главную</a>
+		<hr>
+	</div>
+	<div class="row">
+<div class="wrapper">
+<div id="cube">
+
+<div class="box" id="box1">1</div>
+<div class="box" id="box2">2</div>
+<div class="box" id="box3">3</div>
+<div class="box" id="box4">4</div>
+<div class="box" id="box5">5</div>
+<div class="box" id="box6">6</div>
+
+</div> 
+
+</div>	<!-- wrapper -->
+	</div>
+</div>
+
+<!-- javascript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+	$(document).mousemove(function(e){
+		$("#cube").css({
+			'transform':'rotateX('+e.pageY+'deg) rotateY('+e.pageX+'deg)'});
+	});
+</script>
+</body>
+</html>

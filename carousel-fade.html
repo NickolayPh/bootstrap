@@ -13,45 +13,8 @@
       <script src="../../assets/js/html5shiv.js"></script>
       <script src="../../assets/js/respond.min.js"></script>
     <![endif]-->
-    <style>
-    .carousel-fade .item {
-          transition: 3s ease-in-out opacity;
-        }
 
-    	.item,
-        .active.left,
-        .active.right {
-            opacity: 1;
-            z-index: 1;
-        }
-		.active,
-        {
-            opacity: 1;
-            z-index: 1;
-        }
-        .next.left,
-        .prev.right {
-            opacity: 1;
-            z-index: 2;
-        }
-        .next,
-        .prev,
-        .active.left,
-        .active.right {
-            left: 0 !important;
-            top:  0 !important;
-        }
-        .next,.prev{
-			opacity: 1;
-            z-index: 2;
-        }
-        .carousel-control {
-        z-index: 3;
-    }
-    body{
-    	background-color: pink;
-    }
-    </style>
+     
   </head>
   <body>
     <div class="container">
@@ -59,12 +22,12 @@
 			<h1>Карусель с fade-эффектом</h1>
 			<p><a href="index.html">На главную</a></p>
 		</div>
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/u4dxugGJjuw" frameborder="0" allowfullscreen></iframe>
 	<div class="row">
 		<div class="col-xs-1"></div>
 		<div class="col-xs-9">
 		<!-- ============================================== -->
-		<div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
+		<div id="carousel" class="carousel slide">
 			<ol class="carousel-indicators">
 				<li data-target="#carousel" data-slide-to="0"></li>
 				<li data-target="#carousel" data-slide-to="1"></li>
@@ -94,5 +57,12 @@
 	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script>
+    	$(document).ready(function(){
+    			$("#carousel .next").click(function(){
+    				$("#carousel .active").appendTo(".carousel-inner");
+    			});
+    	});
+    </script>
   </body>
 </html>

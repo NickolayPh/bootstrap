@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button groups</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+<style>
+
+	.nav{
+		list-style: none;
+		
+		
+	}
+	.nav li{
+		display: inline-block;
+		position: relative;
+		
+		}
+	.nav li a{
+		display: block;
+		width: 100px;
+		height: 100px;
+		line-height: 90px;
+		font-size: 20px;
+		text-transform: uppercase;
+
+	}
+	
+	.nav li::after{
+		content: "";
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: linear-gradient(transparent, rgba(0,0,0, .3));
+		opacity: 1;
+	}
+
+	.nav li:hover::after{
+		opacity: 0;
+	}
+	.nav li:nth-child(1){
+		background-color: red;
+	}
+	.nav li:nth-child(2){
+		background-color: lightblue;
+	}
+	.nav li:nth-child(3){
+		background-color: green;
+	}
+	.nav li:nth-child(4){
+		background-color: yellow;
+	}
+	.nav li:nth-child(5){
+		background-color: gray;
+	}
+	.nav li:nth-child(6){
+		background-color: orange;
+	}
+	.image{
+		display: block; 
+	}
+	.menu{
+		min-width: 100px;
+	}
+</style>
+</head>
+<body> 
+<div class="container">
+	<div class="row">
+		<h1>Перемещаемое меню</h1> 
+		<a href="index.html">На главную</a>
+		<hr>
+	</div>
+	<div class="row">
+		<div class="menu col-xs-1 col-lg-12">
+			<ul class="nav">
+				<li><a href="#">item1</a></li><!--
+				--><li><a href="#">item2</a></li><!--
+				--><li><a href="#">item3</a></li><!--
+				--><li><a href="#">item4</a></li><!--
+				--><li><a href="#">item5</a></li><!--
+				--><li><a href="#">item6</a></li>
+			</ul>
+		</div>
+		<div class="col-xs-9 col-sm-10 col-lg-12">
+			<img class="image img-responsive" src="img/slider/1.jpg">
+		</div>
+	</div>
+</div>
+
+<!-- javascript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

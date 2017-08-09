@@ -9,19 +9,46 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
-<style>
-	
-</style>
+	<style>
+		.sidebarToHeader{
+			background-color: #ccc;
+			height: 200px;
+			width: 100%;
+		}
+		.hero{
+			background-color: #c0c;
+			height: 100px;
+		}
+		.box1{
+			background-color: #099;
+			height: 100px;
+		}
+		.box2{
+			background-color: #823;
+			height: 100px;
+		}
+	</style>
 </head>
 <body> 
 <div class="container">
 	<div class="row">
-		<h1>Button groups</h1> 
+		<h1>Sidebar to header</h1> 
 		<a href="index.html">На главную</a>
 		<hr>
 	</div>
 	<div class="row">
-		
+	<div class="col-md-2">
+	<div class="sidebarToHeader">sidebar to header</div>	
+	</div>
+	<div class="col-md-10">
+		<div class="row">
+			<div class="col-md-12"><div class="hero">HERO</div></div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6 col-md-6"><div class="box1">box</div></div>
+			<div class="col-xs-6 col-md-6"><div class="box2">box</div></div>
+		</div>
+	</div>	
 	</div>
 </div>
 
